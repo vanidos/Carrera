@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astarta Hotel</title>
+</head>
+<body>
+      
+<header class="header">
+
+    <div class="top-header">
+        <div class ="nav-left">
+            <div >
+                Демонстрационный сайт, созданный бесплатно
+            </div>
+                <div class="nav-right">
+                  <div><img class="contacts-top-img-size"  src="images/phone_logo.png" alt="Contact button"></div>
+                  <div> +7 915 320 74 80</div>  
+                  <div><img class="contacts-top-img-size" src="images/email.png" alt="Send mail button"></div>
+                  <div>vanidos@gmail.com</div>
+                  <div> <img class="contacts-top-img-size" src="images/magn_logo.png" alt="Search button"></div>   
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="intro"></div>
+        <div class="header_inner">
+         
+            <div class="header_logo"><a href="index.html"><img src="images/logo.png" alt="Hotel logo"/></a></div>
+
+        <nav class="nav">
+            <a class="nav_link" href="about.html">о нас</a>
+            <a class="nav_link" href="rooms.html">номера</a>
+            <a class="nav_link" href="prices.html">цены</a>
+            <a class="nav_link" href="services.html">услуги</a>
+            <a class="nav_link" href="gallery.html">фотогаллерея</a>
+            <a class="nav_link" href="news.html">новости</a>
+            <a class="nav_link" href="feedback.html">отзывы</a>
+            <a class="nav_link" href="contacts.html">контакты</a>
+        </nav>
+    </div>
+ </header>
+
+<section class = "section">
+  <div class="container">
+
+    <div class="section_header">
+        <h4 class="section-suptitle">Главная / Забронировать номер</h4>
+        <h1 class="section-title">Забронировать номер
+        <div class="section-underline"> </div> </h1>
+    </div>
+ 
+<div class="order-form">
+    <form action="reservation.php" method="post">
+        <div class="elem-group">
+          <label for="name">Ваше имя</label>
+          <input type="text" id="name" name="visitor_name" placeholder="Тони Старк" pattern=[A-Z\sa-z]{3,20} required>
+        </div>
+        <div class="elem-group">
+          <label for="email">Ваш E-mail</label>
+          <input type="email" id="email" name="visitor_email" placeholder="iron.man@starkindustries.com" required>
+        </div>
+        <div class="elem-group">
+          <label for="phone">Ваш телефон</label>
+          <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+        </div>
+        <hr>
+        <div class="elem-group inlined">
+          <label for="adult">Взрослых</label>
+          <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+        </div>
+        <div class="elem-group inlined">
+          <label for="child">Детей</label>
+          <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+        </div>
+        <div class="elem-group inlined">
+          <label for="checkin-date">Дата заселения</label>
+          <input type="date" id="checkin-date" name="checkin" required>
+        </div>
+        <div class="elem-group inlined">
+          <label for="checkout-date">Дата выезда</label>
+          <input type="date" id="checkout-date" name="checkout" required>
+        </div>
+        <div class="elem-group">
+          <label for="room-selection">Выберите тип номера</label>
+          <select id="room-selection" name="room_preference" required>
+              <option value="">Наши номера</option>
+              <option value="connecting">Стандарт</option>
+              <option value="adjoining">Улучшенный</option>
+              <option value="adjacent">Люкс комфорт</option>
+              <option value="adjacent">Люкс премиум</option>
+          </select>
+        </div>
+        <hr>
+        <div class="elem-group">
+          <label for="message">Ваши пожелания</label>
+          <textarea id="message" name="visitor_message" placeholder="Расскажите нам что-нибудь еще, что может быть важно." required></textarea>
+        </div>
+        <button class="button" type="submit">Забронировать</button>
+      </form>
+
+</div>
+</div>
+
+</section>
+   
+<footer></footer>
+
+
+
+</body>
+</html>
